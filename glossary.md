@@ -12,4 +12,4 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `ep` | Environment Pointer. Local variables, including method parameters are stored in the `ep` array. The `ep` is pointed to by the `cfp` |
 | `iseq` | Instruction Sequence.  Usually "iseq" in the C code will refer to an `rb_iseq_t` object that holds a reference to the actual instruction sequences which are executed by the VM. The object also holds information about the code, like the method name associated with the code. |
 | WB | Write Barrier.  To do with GC write barriers |
-
+| WC | Wild Card. As seen in instructions like `getlocal_WC_0`.  It means this instruction takes a "wild card" for the parameter (in this case an index for a local) |
