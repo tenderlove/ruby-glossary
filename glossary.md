@@ -13,6 +13,7 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `iseq` | Instruction Sequence.  Usually "iseq" in the C code will refer to an `rb_iseq_t` object that holds a reference to the actual instruction sequences which are executed by the VM. The object also holds information about the code, like the method name associated with the code. |
 | `pc` | Program Counter. Usually the instruction that will be executed _next_ by the VM. Pointed to by the `cfp` and incremented by the VM |
 | `sp` | Stack Pointer. The top of the stack. The VM executes instructions in the `iseq` and instructions will push and pop values on the stack. The VM updates the `sp` on the `cfp` to point at the top of the stack|
+| `VALUE` | VALUE is a pointer to a ruby object from the Ruby C code. |
 | VM   | Virtual Machine. In MRI's case YARV (Yet Another Ruby VM)
 | WB | Write Barrier.  To do with GC write barriers |
 | WC | Wild Card. As seen in instructions like `getlocal_WC_0`.  It means this instruction takes a "wild card" for the parameter (in this case an index for a local) |
