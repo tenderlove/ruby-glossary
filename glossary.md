@@ -11,7 +11,7 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `ec` | Execution Context. The top level VM context, points at the current `cfp` |
 | `ep` | Environment Pointer. Local variables, including method parameters are stored in the `ep` array. The `ep` is pointed to by the `cfp` |
 | `iseq` | Instruction Sequence.  Usually "iseq" in the C code will refer to an `rb_iseq_t` object that holds a reference to the actual instruction sequences which are executed by the VM. The object also holds information about the code, like the method name associated with the code. |
-| `lep` | Local Environment Pointer. |
+| `lep` | Local Environment Pointer. An `ep` which is tagged `VM_ENV_FLAG_LOCAL`. Usually this is the `ep` of a method (rather than a block, whose `ep` isn't "local") |
 | `pc` | Program Counter. Usually the instruction that will be executed _next_ by the VM. Pointed to by the `cfp` and incremented by the VM |
 | `sp` | Stack Pointer. The top of the stack. The VM executes instructions in the `iseq` and instructions will push and pop values on the stack. The VM updates the `sp` on the `cfp` to point at the top of the stack|
 | `VALUE` | VALUE is a pointer to a ruby object from the Ruby C code. |
