@@ -19,7 +19,7 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `imemo` | Internal Memo.  A struct whose memory is managed by Ruby's GC, but contains internal information and isn't meant to be exposed to Ruby programs. Contains various information depending on the type. |
 | JIT | Just In Time compiler |
 | `lep` | Local Environment Pointer. An `ep` which is tagged `VM_ENV_FLAG_LOCAL`. Usually this is the `ep` of a method (rather than a block, whose `ep` isn't "local") |
-| MRI | Matz's Ruby Interpreter |
+| MRI | Matz's Ruby Implementation |
 | `pc` | Program Counter. Usually the instruction that will be executed _next_ by the VM. Pointed to by the `cfp` and incremented by the VM |
 | `sp` | Stack Pointer. The top of the stack. The VM executes instructions in the `iseq` and instructions will push and pop values on the stack. The VM updates the `sp` on the `cfp` to point at the top of the stack|
 | `VALUE` | VALUE is a pointer to a ruby object from the Ruby C code. |
