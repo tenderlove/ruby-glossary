@@ -9,6 +9,7 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `cfp`| Control Frame Pointer. Represents a Ruby stack frame.  Calling a method pushes a new frame (cfp), returning pops a frame. Points at  the `pc`, `sp`, `ep`, and the corresponding `iseq`|
 | `ci` | Call Information.  Refers to an `rb_callinfo` struct. Contains call information about the call site, including number of parameters to be passed, whether it they are keyword arguments or not, etc. Used in conjunction with the `cc` and `cd`. |
 | CRuby | Implementation of Ruby written in C |
+| `dvar` | Dynamic Variable. Used by the parser to refer to local variables that are defined outside of the current lexical scope. For example `def foo; bar = 1; -> { p bar }; end` the "bar" inside the block is a `dvar` |
 | `ec` | Execution Context. The top level VM context, points at the current `cfp` |
 | `ep` | Environment Pointer. Local variables, including method parameters are stored in the `ep` array. The `ep` is pointed to by the `cfp` |
 | GC | Garbage Collector |
