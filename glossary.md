@@ -16,6 +16,7 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | `ep` | Environment Pointer. Local variables, including method parameters are stored in the `ep` array. The `ep` is pointed to by the `cfp` |
 | GC | Garbage Collector |
 | `gvar` | Global Variable. Refers to a Ruby global variable like `$$`, etc |
+| `ICLASS` | Internal Class. When a module is included, the target class gets a new superclass which is an instance of an `ICLASS`. The `ICLASS` represents the module in the inheritance chain. |
 | `iseq` | Instruction Sequence.  Usually "iseq" in the C code will refer to an `rb_iseq_t` object that holds a reference to the actual instruction sequences which are executed by the VM. The object also holds information about the code, like the method name associated with the code. |
 | `insn` | Instruction. Refers to a YARV instruction. |
 | `insns` | Instructions. Usually an array of YARV instructions. |
