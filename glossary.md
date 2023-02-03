@@ -36,3 +36,4 @@ Just a list of acronyms I've run across in the Ruby source code and their meanin
 | WB | Write Barrier.  To do with GC write barriers |
 | WC | Wild Card. As seen in instructions like `getlocal_WC_0`.  It means this instruction takes a "wild card" for the parameter (in this case an index for a local) |
 | YARV | Yet Another Ruby VM.  The virtual machine that CRuby uses |
+| ZOMBIE | A zombie object. An object that has a finalizer which hasn't been executed yet. The object has been collected, so is "dead", but the finalizer hasn't run yet so it's still somewhat alive. |
